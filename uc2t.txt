@@ -1,0 +1,31 @@
+import java.util.Random;
+
+public class TicTacToe {
+
+    public static void main(String[] args) {
+
+        Random random = new Random();
+
+        boolean isUserTurn = random.nextBoolean();
+
+        char userSymbol;
+        char computerSymbol;
+        char currentSymbol;
+
+        if (isUserTurn) {
+            userSymbol = 'X';
+            computerSymbol = 'O';
+            currentSymbol = userSymbol;
+            System.out.println("User starts first with symbol X");
+        } else {
+            userSymbol = 'O';
+            computerSymbol = 'X';
+            currentSymbol = computerSymbol;
+            System.out.println("Computer starts first with symbol X");
+        }
+
+        System.out.println("User Symbol: " + userSymbol);
+        System.out.println("Computer Symbol: " + computerSymbol);
+        System.out.println("Current Turn Symbol: " + currentSymbol);
+    }
+}
